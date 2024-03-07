@@ -1,5 +1,5 @@
 //! Benchmarks intersection between rays and planes
-#![feature(stdsimd)]
+#![feature(stdarch_x86_avx512)]
 
 use criterion::*;
 

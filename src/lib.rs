@@ -1,3 +1,6 @@
+#![allow(internal_features)]
+#![allow(unused_imports)]
+
 //! # Portable packed SIMD vectors
 //!
 //! This crate is proposed for stabilization as `std::packed_simd` in [RFC2366:
@@ -216,7 +219,7 @@
     repr_simd,
     rustc_attrs,
     platform_intrinsics,
-    stdsimd,
+    stdarch_x86_avx512,
     arm_target_feature,
     link_llvm_intrinsics,
     core_intrinsics,

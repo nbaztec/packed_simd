@@ -1,5 +1,5 @@
 //! Benchmarks PNRG
-#![feature(stdsimd)]
+#![feature(stdarch_x86_avx512)]
 
 use aobench_lib::geometry::f32xN;
 use aobench_lib::random;

@@ -1,5 +1,5 @@
 //! Benchmarks intersection between rays and spheres
-#![feature(stdsimd)]
+#![feature(stdarch_x86_avx512)]
 
 use crate::geometry::{f32xN, Ray, RayxN, Sphere, V3DxN, V3D};
 use crate::intersection::{Intersect, Isect, IsectxN};
