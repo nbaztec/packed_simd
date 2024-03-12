@@ -1,5 +1,6 @@
 //! Benchmarks PNRG
-#![feature(stdarch_x86_avx512)]
+#![cfg_attr(any(target_arch = "x86", target_arch = "x86_64"), feature(stdarch_x86_avx512))]
+#![cfg_attr(target_arch = "aarch64", feature(stdarch_arm_crc32))]
 
 use aobench_lib::geometry::f32xN;
 use aobench_lib::random;

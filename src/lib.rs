@@ -213,13 +213,13 @@
 //! you choose an appropriate set of `target-feature` and `target-cpu`
 //! options during builds. For more information, see the [Performance
 //! guide](https://rust-lang-nursery.github.io/packed_simd/perf-guide/)
-
+#![cfg_attr(any(target_arch = "x86", target_arch = "x86_64"), feature(stdarch_x86_avx512))]
+#![cfg_attr(target_arch = "aarch64", feature(stdarch_arm_crc32))]
 #![feature(
     adt_const_params,
     repr_simd,
     rustc_attrs,
     platform_intrinsics,
-    stdarch_x86_avx512,
     arm_target_feature,
     link_llvm_intrinsics,
     core_intrinsics,
